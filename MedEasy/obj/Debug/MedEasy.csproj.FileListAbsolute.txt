@@ -1,0 +1,12 @@
+D:\POC\MedEasy\bin\Debug\MedEasy.exe.config
+D:\POC\MedEasy\bin\Debug\MedEasy.exe
+D:\POC\MedEasy\bin\Debug\MedEasy.pdb
+D:\POC\MedEasy\obj\Debug\MedEasy.DAC.MedEasySQLCommands.resources
+D:\POC\MedEasy\obj\Debug\MedEasy.Forms.item.ItemEntry.resources
+D:\POC\MedEasy\obj\Debug\MedEasy.Forms.MedEasyMaster.resources
+D:\POC\MedEasy\obj\Debug\MedEasy.Forms.stock.StockEntry.resources
+D:\POC\MedEasy\obj\Debug\MedEasy.Main.resources
+D:\POC\MedEasy\obj\Debug\MedEasy.Properties.Resources.resources
+D:\POC\MedEasy\obj\Debug\MedEasy.csproj.GenerateResource.Cache
+D:\POC\MedEasy\obj\Debug\MedEasy.exe
+D:\POC\MedEasy\obj\Debug\MedEasy.pdb
