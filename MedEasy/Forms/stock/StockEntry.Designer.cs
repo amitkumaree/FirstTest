@@ -134,9 +134,9 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(35, 117);
+            this.dateTimePicker1.Location = new System.Drawing.Point(326, 82);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(85, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(96, 21);
             this.dateTimePicker1.TabIndex = 85;
             // 
             // label7
@@ -144,7 +144,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(31, 97);
+            this.label7.Location = new System.Drawing.Point(322, 62);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 19);
             this.label7.TabIndex = 84;
@@ -156,7 +156,7 @@
             this.combo_payMode.Items.AddRange(new object[] {
             "Cash",
             "Cheque"});
-            this.combo_payMode.Location = new System.Drawing.Point(559, 116);
+            this.combo_payMode.Location = new System.Drawing.Point(663, 28);
             this.combo_payMode.Name = "combo_payMode";
             this.combo_payMode.Size = new System.Drawing.Size(121, 21);
             this.combo_payMode.TabIndex = 83;
@@ -166,7 +166,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(555, 97);
+            this.label6.Location = new System.Drawing.Point(659, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 19);
             this.label6.TabIndex = 82;
@@ -177,7 +177,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(413, 97);
+            this.label5.Location = new System.Drawing.Point(440, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 19);
             this.label5.TabIndex = 80;
@@ -185,9 +185,9 @@
             // 
             // txt_VendorName
             // 
-            this.txt_VendorName.Location = new System.Drawing.Point(417, 116);
+            this.txt_VendorName.Location = new System.Drawing.Point(444, 28);
             this.txt_VendorName.Name = "txt_VendorName";
-            this.txt_VendorName.Size = new System.Drawing.Size(128, 21);
+            this.txt_VendorName.Size = new System.Drawing.Size(200, 21);
             this.txt_VendorName.TabIndex = 79;
             // 
             // label4
@@ -195,7 +195,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(255, 97);
+            this.label4.Location = new System.Drawing.Point(141, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 19);
             this.label4.TabIndex = 78;
@@ -203,17 +203,17 @@
             // 
             // txt_PurchaseVoucherNo
             // 
-            this.txt_PurchaseVoucherNo.Location = new System.Drawing.Point(259, 116);
+            this.txt_PurchaseVoucherNo.Location = new System.Drawing.Point(145, 29);
             this.txt_PurchaseVoucherNo.Name = "txt_PurchaseVoucherNo";
-            this.txt_PurchaseVoucherNo.Size = new System.Drawing.Size(142, 21);
+            this.txt_PurchaseVoucherNo.Size = new System.Drawing.Size(277, 21);
             this.txt_PurchaseVoucherNo.TabIndex = 77;
             // 
             // dateTimePicker_Purchase_Dt
             // 
             this.dateTimePicker_Purchase_Dt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Purchase_Dt.Location = new System.Drawing.Point(147, 117);
+            this.dateTimePicker_Purchase_Dt.Location = new System.Drawing.Point(14, 29);
             this.dateTimePicker_Purchase_Dt.Name = "dateTimePicker_Purchase_Dt";
-            this.dateTimePicker_Purchase_Dt.Size = new System.Drawing.Size(85, 21);
+            this.dateTimePicker_Purchase_Dt.Size = new System.Drawing.Size(111, 21);
             this.dateTimePicker_Purchase_Dt.TabIndex = 76;
             // 
             // label3
@@ -221,7 +221,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(143, 97);
+            this.label3.Location = new System.Drawing.Point(10, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 19);
             this.label3.TabIndex = 75;
@@ -232,7 +232,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(269, 51);
+            this.label2.Location = new System.Drawing.Point(265, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 19);
             this.label2.TabIndex = 74;
@@ -240,7 +240,7 @@
             // 
             // txt_CSGT
             // 
-            this.txt_CSGT.Location = new System.Drawing.Point(273, 70);
+            this.txt_CSGT.Location = new System.Drawing.Point(269, 179);
             this.txt_CSGT.Name = "txt_CSGT";
             this.txt_CSGT.Size = new System.Drawing.Size(56, 21);
             this.txt_CSGT.TabIndex = 73;
@@ -250,7 +250,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(192, 51);
+            this.label1.Location = new System.Drawing.Point(188, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 19);
             this.label1.TabIndex = 72;
@@ -258,14 +258,14 @@
             // 
             // txt_IGST
             // 
-            this.txt_IGST.Location = new System.Drawing.Point(196, 70);
+            this.txt_IGST.Location = new System.Drawing.Point(192, 179);
             this.txt_IGST.Name = "txt_IGST";
             this.txt_IGST.Size = new System.Drawing.Size(56, 21);
             this.txt_IGST.TabIndex = 71;
             // 
             // btn_Del_StockEntry
             // 
-            this.btn_Del_StockEntry.Location = new System.Drawing.Point(567, 188);
+            this.btn_Del_StockEntry.Location = new System.Drawing.Point(563, 297);
             this.btn_Del_StockEntry.Name = "btn_Del_StockEntry";
             this.btn_Del_StockEntry.Size = new System.Drawing.Size(195, 25);
             this.btn_Del_StockEntry.TabIndex = 70;
@@ -274,7 +274,7 @@
             // 
             // btn_Save_StockEntry
             // 
-            this.btn_Save_StockEntry.Location = new System.Drawing.Point(35, 188);
+            this.btn_Save_StockEntry.Location = new System.Drawing.Point(31, 297);
             this.btn_Save_StockEntry.Name = "btn_Save_StockEntry";
             this.btn_Save_StockEntry.Size = new System.Drawing.Size(191, 25);
             this.btn_Save_StockEntry.TabIndex = 69;
@@ -287,7 +287,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label31.Location = new System.Drawing.Point(31, 145);
+            this.label31.Location = new System.Drawing.Point(27, 254);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(65, 19);
             this.label31.TabIndex = 68;
@@ -295,7 +295,7 @@
             // 
             // txt_Remarks_StockEntry
             // 
-            this.txt_Remarks_StockEntry.Location = new System.Drawing.Point(113, 145);
+            this.txt_Remarks_StockEntry.Location = new System.Drawing.Point(109, 254);
             this.txt_Remarks_StockEntry.Name = "txt_Remarks_StockEntry";
             this.txt_Remarks_StockEntry.Size = new System.Drawing.Size(649, 21);
             this.txt_Remarks_StockEntry.TabIndex = 67;
@@ -305,7 +305,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label30.Location = new System.Drawing.Point(634, 51);
+            this.label30.Location = new System.Drawing.Point(630, 160);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(68, 19);
             this.label30.TabIndex = 66;
@@ -314,7 +314,7 @@
             // txt_NetTotal_StockEntry
             // 
             this.txt_NetTotal_StockEntry.Enabled = false;
-            this.txt_NetTotal_StockEntry.Location = new System.Drawing.Point(638, 70);
+            this.txt_NetTotal_StockEntry.Location = new System.Drawing.Point(634, 179);
             this.txt_NetTotal_StockEntry.Name = "txt_NetTotal_StockEntry";
             this.txt_NetTotal_StockEntry.Size = new System.Drawing.Size(124, 21);
             this.txt_NetTotal_StockEntry.TabIndex = 65;
@@ -324,7 +324,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label29.Location = new System.Drawing.Point(413, 51);
+            this.label29.Location = new System.Drawing.Point(409, 160);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(39, 19);
             this.label29.TabIndex = 64;
@@ -332,7 +332,7 @@
             // 
             // txt_MRP_StockEntry
             // 
-            this.txt_MRP_StockEntry.Location = new System.Drawing.Point(418, 70);
+            this.txt_MRP_StockEntry.Location = new System.Drawing.Point(414, 179);
             this.txt_MRP_StockEntry.Name = "txt_MRP_StockEntry";
             this.txt_MRP_StockEntry.Size = new System.Drawing.Size(104, 21);
             this.txt_MRP_StockEntry.TabIndex = 63;
@@ -342,7 +342,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label28.Location = new System.Drawing.Point(342, 51);
+            this.label28.Location = new System.Drawing.Point(338, 160);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(31, 19);
             this.label28.TabIndex = 62;
@@ -350,7 +350,7 @@
             // 
             // txt_Tax_StockEntry
             // 
-            this.txt_Tax_StockEntry.Location = new System.Drawing.Point(346, 70);
+            this.txt_Tax_StockEntry.Location = new System.Drawing.Point(342, 179);
             this.txt_Tax_StockEntry.Name = "txt_Tax_StockEntry";
             this.txt_Tax_StockEntry.Size = new System.Drawing.Size(56, 21);
             this.txt_Tax_StockEntry.TabIndex = 61;
@@ -360,7 +360,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label27.Location = new System.Drawing.Point(532, 51);
+            this.label27.Location = new System.Drawing.Point(528, 160);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(59, 19);
             this.label27.TabIndex = 60;
@@ -368,7 +368,7 @@
             // 
             // txt_Amount_StockEntry
             // 
-            this.txt_Amount_StockEntry.Location = new System.Drawing.Point(536, 70);
+            this.txt_Amount_StockEntry.Location = new System.Drawing.Point(532, 179);
             this.txt_Amount_StockEntry.Name = "txt_Amount_StockEntry";
             this.txt_Amount_StockEntry.Size = new System.Drawing.Size(85, 21);
             this.txt_Amount_StockEntry.TabIndex = 59;
@@ -378,7 +378,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label26.Location = new System.Drawing.Point(109, 51);
+            this.label26.Location = new System.Drawing.Point(105, 160);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(39, 19);
             this.label26.TabIndex = 58;
@@ -386,7 +386,7 @@
             // 
             // txt_Rate_StockEntry
             // 
-            this.txt_Rate_StockEntry.Location = new System.Drawing.Point(113, 70);
+            this.txt_Rate_StockEntry.Location = new System.Drawing.Point(109, 179);
             this.txt_Rate_StockEntry.Name = "txt_Rate_StockEntry";
             this.txt_Rate_StockEntry.Size = new System.Drawing.Size(68, 21);
             this.txt_Rate_StockEntry.TabIndex = 57;
@@ -396,7 +396,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label25.Location = new System.Drawing.Point(31, 51);
+            this.label25.Location = new System.Drawing.Point(27, 160);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(36, 19);
             this.label25.TabIndex = 56;
@@ -404,7 +404,7 @@
             // 
             // txt_Unit_StockEntry
             // 
-            this.txt_Unit_StockEntry.Location = new System.Drawing.Point(35, 70);
+            this.txt_Unit_StockEntry.Location = new System.Drawing.Point(31, 179);
             this.txt_Unit_StockEntry.Name = "txt_Unit_StockEntry";
             this.txt_Unit_StockEntry.Size = new System.Drawing.Size(66, 21);
             this.txt_Unit_StockEntry.TabIndex = 55;
@@ -415,7 +415,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label24.Location = new System.Drawing.Point(691, 4);
+            this.label24.Location = new System.Drawing.Point(687, 113);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(65, 19);
             this.label24.TabIndex = 54;
@@ -423,7 +423,7 @@
             // 
             // txt_Quantity_StockEntry
             // 
-            this.txt_Quantity_StockEntry.Location = new System.Drawing.Point(695, 23);
+            this.txt_Quantity_StockEntry.Location = new System.Drawing.Point(691, 132);
             this.txt_Quantity_StockEntry.Name = "txt_Quantity_StockEntry";
             this.txt_Quantity_StockEntry.Size = new System.Drawing.Size(67, 21);
             this.txt_Quantity_StockEntry.TabIndex = 53;
@@ -433,7 +433,7 @@
             this.lbl_StockRatio.AutoSize = true;
             this.lbl_StockRatio.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_StockRatio.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_StockRatio.Location = new System.Drawing.Point(634, 4);
+            this.lbl_StockRatio.Location = new System.Drawing.Point(630, 113);
             this.lbl_StockRatio.Name = "lbl_StockRatio";
             this.lbl_StockRatio.Size = new System.Drawing.Size(43, 19);
             this.lbl_StockRatio.TabIndex = 52;
@@ -441,7 +441,7 @@
             // 
             // txt_Ratio_StockEntry
             // 
-            this.txt_Ratio_StockEntry.Location = new System.Drawing.Point(638, 23);
+            this.txt_Ratio_StockEntry.Location = new System.Drawing.Point(634, 132);
             this.txt_Ratio_StockEntry.Name = "txt_Ratio_StockEntry";
             this.txt_Ratio_StockEntry.Size = new System.Drawing.Size(39, 21);
             this.txt_Ratio_StockEntry.TabIndex = 51;
@@ -449,9 +449,9 @@
             // dateTimePicker_StockExpiry
             // 
             this.dateTimePicker_StockExpiry.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_StockExpiry.Location = new System.Drawing.Point(536, 23);
+            this.dateTimePicker_StockExpiry.Location = new System.Drawing.Point(444, 81);
             this.dateTimePicker_StockExpiry.Name = "dateTimePicker_StockExpiry";
-            this.dateTimePicker_StockExpiry.Size = new System.Drawing.Size(85, 21);
+            this.dateTimePicker_StockExpiry.Size = new System.Drawing.Size(97, 21);
             this.dateTimePicker_StockExpiry.TabIndex = 50;
             // 
             // label23
@@ -459,7 +459,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label23.Location = new System.Drawing.Point(532, 4);
+            this.label23.Location = new System.Drawing.Point(440, 62);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(32, 19);
             this.label23.TabIndex = 49;
@@ -470,7 +470,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label22.Location = new System.Drawing.Point(413, 4);
+            this.label22.Location = new System.Drawing.Point(409, 113);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(46, 19);
             this.label22.TabIndex = 47;
@@ -478,7 +478,7 @@
             // 
             // txt_Batch_StockEntry
             // 
-            this.txt_Batch_StockEntry.Location = new System.Drawing.Point(417, 23);
+            this.txt_Batch_StockEntry.Location = new System.Drawing.Point(413, 132);
             this.txt_Batch_StockEntry.Name = "txt_Batch_StockEntry";
             this.txt_Batch_StockEntry.Size = new System.Drawing.Size(105, 21);
             this.txt_Batch_StockEntry.TabIndex = 46;
@@ -488,7 +488,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label21.Location = new System.Drawing.Point(35, 4);
+            this.label21.Location = new System.Drawing.Point(31, 113);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(23, 19);
             this.label21.TabIndex = 45;
@@ -499,7 +499,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label20.Location = new System.Drawing.Point(109, 4);
+            this.label20.Location = new System.Drawing.Point(10, 62);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(47, 19);
             this.label20.TabIndex = 5;
@@ -508,7 +508,7 @@
             // txt_ItemId_StockEntry
             // 
             this.txt_ItemId_StockEntry.Enabled = false;
-            this.txt_ItemId_StockEntry.Location = new System.Drawing.Point(35, 23);
+            this.txt_ItemId_StockEntry.Location = new System.Drawing.Point(31, 132);
             this.txt_ItemId_StockEntry.Name = "txt_ItemId_StockEntry";
             this.txt_ItemId_StockEntry.Size = new System.Drawing.Size(66, 21);
             this.txt_ItemId_StockEntry.TabIndex = 44;
@@ -518,7 +518,7 @@
             this.txt_Name_StockEntry.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txt_Name_StockEntry.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_Name_StockEntry.Enabled = false;
-            this.txt_Name_StockEntry.Location = new System.Drawing.Point(113, 23);
+            this.txt_Name_StockEntry.Location = new System.Drawing.Point(14, 81);
             this.txt_Name_StockEntry.Name = "txt_Name_StockEntry";
             this.txt_Name_StockEntry.Size = new System.Drawing.Size(290, 21);
             this.txt_Name_StockEntry.TabIndex = 4;

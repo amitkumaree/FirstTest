@@ -170,11 +170,16 @@ namespace MedEasy.Forms.stock
         {
 
             // if the text box has no text then refresh the grid
-            if (string.IsNullOrEmpty(txt_search_Item.Text) || txt_search_Item.Text.Length < 3)
+            if (string.IsNullOrEmpty(txt_search_Item.Text) 
+                || txt_search_Item.Text.Length < 3
+                || txt_search_Item.Text.Equals("Search Medicine...."))
             {
-                combo_searchResult.DroppedDown = false;
-                combo_searchResult.DataSource = null;
-                combo_searchResult.Visible = false;
+                if (combo_searchResult.Visible)
+                {
+                    combo_searchResult.DroppedDown = false;
+                    combo_searchResult.DataSource = null;
+                    combo_searchResult.Visible = false;
+                }
                 return;
             }
 
@@ -200,6 +205,10 @@ namespace MedEasy.Forms.stock
                     combo_searchResult.DisplayMember = "Value";
 
                 }
+                else
+                {
+                    MessageBox.Show("Medecine doesnt Exist!! Add in item and then enter Stock", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
                 // If filtered search result is 1 then copy the content to stock form
                 //if (filteredItems.Count == 1)
@@ -220,6 +229,8 @@ namespace MedEasy.Forms.stock
             combo_searchResult.DroppedDown = false;
 
             ComboBox cmb = (ComboBox)sender;
+            if (null == cmb.SelectedValue)
+                return;
             int selectedKey = ((System.Collections.Generic.KeyValuePair<int, string>)
                               (((System.Windows.Forms.ListControl)(cmb)).SelectedValue)).Key;
             string selectedValue = ((System.Collections.Generic.KeyValuePair<int, string>)
