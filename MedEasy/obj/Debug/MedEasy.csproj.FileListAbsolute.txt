@@ -16,7 +16,6 @@ D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.exe
 D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.pdb
 D:\POC\Github\FirstTest\MedEasy\bin\Debug\MedEasy.exe
 D:\POC\Github\FirstTest\MedEasy\bin\Debug\MedEasy.pdb
-D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.csprojResolveAssemblyReference.cache
 D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.DAC.MedEasySQLCommands.resources
 D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.Forms.item.ItemEntry.resources
 D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.Forms.MedEasyMaster.resources

@@ -242,15 +242,25 @@ namespace MedEasy.Forms.stock
             if (null != item)
             {
                 // Fill the item text box with the value collected
-                txt_ItemId_StockEntry.Text = item.ItemUid.ToString();
+                //txt_ItemId_StockEntry.Text = item.ItemUid.ToString();
                 txt_Name_StockEntry.Text = item.ItemBrandName;
-                txt_MRP_StockEntry.Text = item.Mrp.ToString();
+                txt_Price_bf_tax.Text = item.Mrp.ToString();
+               
                 txt_Tax_StockEntry.Text = item.Tax.ToString();
                 txt_Rate_StockEntry.Text = item.PerUnitRate.ToString();
                 txt_IGST.Text = item.Igst.ToString();
                 txt_CSGT.Text = item.Cgst.ToString();
+                txt_Unit_StockEntry.Text = "1";
+                txt_No_of_Unit_in_Item.Text = item.PackSize;
                 txt_Tax_StockEntry.Text = (item.Igst + item.Cgst).ToString();
+                txt_MRP_StockEntry.Text = GetMRP(item);
             }
+        }
+
+        private string GetMRP(Item item)
+        {
+            var MRP = item.Mrp + (item.Mrp * item.Igst / 100) + (item.Mrp * item.Igst / 100);
+            return MRP.Value.ToString("#.00");
         }
 
         private void txt_Unit_StockEntry_LostFocus(object sender, EventArgs e)
@@ -267,14 +277,14 @@ namespace MedEasy.Forms.stock
             int unit = Convert.ToInt32(txt_Unit_StockEntry.Text);
             decimal mrp = Convert.ToDecimal(txt_MRP_StockEntry.Text);
 
-            txt_Amount_StockEntry.Text = (unit * mrp).ToString();
+            txt_Price_bf_tax.Text = (unit * mrp).ToString();
         }
 
         private void btn_Save_StockEntry_Click(object sender, EventArgs e)
         {
             string error = string.Empty;
 
-            if (string.IsNullOrEmpty(txt_ItemId_StockEntry.Text))
+            if (string.IsNullOrEmpty(txt_Name_StockEntry.Text))
                 error += "Choose Item (Medicine) to add in Stock\n";
             if (string.IsNullOrEmpty(txt_Batch_StockEntry.Text))
                 error += "Enter Batch\n";
@@ -287,6 +297,11 @@ namespace MedEasy.Forms.stock
             
             if(!string.IsNullOrEmpty(error))
                 MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void txt_PurchaseVoucherNo_LostFocus(object sender, EventArgs e)
+        {
+
         }
 
 
