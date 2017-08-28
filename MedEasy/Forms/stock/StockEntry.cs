@@ -15,6 +15,8 @@ namespace MedEasy.Forms.stock
     public partial class StockEntry : Form
     {
         List<Item> _items = new List<Item>();
+        Item _currentChoosenITem = new Item();
+
         public StockEntry()
         {
             InitializeComponent();
@@ -32,6 +34,9 @@ namespace MedEasy.Forms.stock
             //var itemSearcLst = new ItemBuss().GetSearchItem();
             //dataGrid_Item.DataSource = itemSearcLst;
             _items = new ItemBuss().Items;
+            dataGridView_ShowStock.DataSource = new ItemBuss().GetStocks();
+            dataGridView_ShowStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
             //AutoCompleteStringCollection MyCollection = new AutoCompleteStringCollection();
             //foreach (var item in _items)
             //    //MyCollection.Add(item.ItemBrandName);
@@ -241,6 +246,8 @@ namespace MedEasy.Forms.stock
             var item = _items.Where(it => it.ItemUid == selectedKey).First();
             if (null != item)
             {
+                // Set the current choosen item as this item
+                _currentChoosenITem = item;
                 // Fill the item text box with the value collected
                 //txt_ItemId_StockEntry.Text = item.ItemUid.ToString();
                 txt_Name_StockEntry.Text = item.ItemBrandName;
@@ -254,6 +261,8 @@ namespace MedEasy.Forms.stock
                 txt_No_of_Unit_in_Item.Text = item.PackSize;
                 txt_Tax_StockEntry.Text = (item.Igst + item.Cgst).ToString();
                 txt_MRP_StockEntry.Text = GetMRP(item);
+
+                txt_Remarks_StockEntry.Focus();
             }
         }
 
@@ -294,18 +303,128 @@ namespace MedEasy.Forms.stock
                 error += "Enter Purchase Voucher No \n";
             if (string.IsNullOrEmpty(txt_VendorName.Text))
                 error += "Enter Vendor Name \n";
-            
-            if(!string.IsNullOrEmpty(error))
+
+            if (!string.IsNullOrEmpty(error))
                 MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                //var gross = string.IsNullOrEmpty(txt_Price_bf_tax.Text) ? 0 : Convert.ToDecimal(txt_Price_bf_tax.Text);
+                //var perUnitPrice = string.IsNullOrEmpty(txt_Rate_StockEntry.Text) ? 0 : Convert.ToDecimal(txt_Rate_StockEntry.Text);
+                //var UnitsInItem = gross/perUnitPrice;
+                // collect data and save in stock hdr and stock dtl
+                var saveStock = new SaveStock();
+                saveStock.StockHeader = 
+                    new Stock 
+                    {
+                        PurchaseDate = Convert.ToDateTime(dateTimePicker_Purchase_Dt.Value.ToShortDateString()),
+                        PurchaseVoucherNo = txt_PurchaseVoucherNo.Text,
+                        VendorName = txt_VendorName.Text,
+                        GrossPrice = string.IsNullOrEmpty(txt_Price_bf_tax.Text) ? 0 : Convert.ToDecimal(txt_Price_bf_tax.Text),
+                        DiscountPer = string.IsNullOrEmpty(txt_Discount_Percent.Text) ? 0 : Convert.ToDecimal(txt_Discount_Percent.Text),
+                        DiscountPrice = string.IsNullOrEmpty(txt_discount_Amt.Text) ? 0 : Convert.ToDecimal(txt_discount_Amt.Text),
+                        TaxPer = string.IsNullOrEmpty(txt_Tax_StockEntry.Text) ? 0 : Convert.ToDecimal(txt_Tax_StockEntry.Text),
+                        ItemCount = 1,
+                        PayType = combo_payMode.SelectedText,
+                        NetPrice = string.IsNullOrEmpty(txt_NetTotal_StockEntry.Text) ? 0 : Convert.ToDecimal(txt_NetTotal_StockEntry.Text),
+                        Rmks = txt_Remarks_StockEntry.Text,
+                    };
+                saveStock.StockDtl = 
+                    new StockDtl 
+                    {
+                        ItemUid = _currentChoosenITem.ItemUid,
+                        BatchNo = txt_Batch_StockEntry.Text,
+                        ManufacturerDt = dateTimePicker_Manufacture.Value,
+                        ExpDt = dateTimePicker_Expiry.Value,
+                        PerUnitRate = string.IsNullOrEmpty(txt_Rate_StockEntry.Text) ? 0 : Convert.ToDecimal(txt_Rate_StockEntry.Text),
+                        Mrp = string.IsNullOrEmpty(txt_MRP_StockEntry.Text) ? 0 : Convert.ToDecimal(txt_MRP_StockEntry.Text),
+                        GrossPrice = string.IsNullOrEmpty(txt_Price_bf_tax.Text) ? 0 : Convert.ToDecimal(txt_Price_bf_tax.Text),
+                        TaxPer = string.IsNullOrEmpty(txt_Tax_StockEntry.Text) ? 0 : Convert.ToDecimal(txt_Tax_StockEntry.Text),
+                        DiscountAmt = string.IsNullOrEmpty(txt_discount_Amt.Text) ? 0 : Convert.ToDecimal(txt_discount_Amt.Text),
+                        NetPrice = string.IsNullOrEmpty(txt_NetTotal_StockEntry.Text) ? 0 : Convert.ToDecimal(txt_NetTotal_StockEntry.Text),
+                        PurchaseQty = string.IsNullOrEmpty(txt_Quantity_StockEntry.Text) ? 0 : Convert.ToInt32(txt_Quantity_StockEntry.Text),
+                        PurchaseUnit = _currentChoosenITem.PackSize //! known issue
+                    };
+
+                new ItemBuss().SaveStock(saveStock);
+                dataGridView_ShowStock.DataSource = new ItemBuss().GetStocks();
+            }
         }
 
         private void txt_PurchaseVoucherNo_LostFocus(object sender, EventArgs e)
         {
+            CheckMastDtlEntered();
+        }
+        private void txt_VendorName_LostFocus(object sender, EventArgs e)
+        {
+            CheckMastDtlEntered();
+        }
+        private void combo_payMode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckMastDtlEntered();
+        }
+
+        private void CheckMastDtlEntered()
+        {
+            if (!string.IsNullOrEmpty(txt_PurchaseVoucherNo.Text) && !string.IsNullOrEmpty(txt_VendorName.Text)
+                && combo_payMode.SelectedItem != null)
+            {
+                pnlMain.Enabled = true;
+                txt_search_Item.Focus();
+                EnableDisableMaster(false);
+            }
+            else
+                pnlMain.Enabled = false;
 
         }
 
+        private void EnableDisableMaster(bool enable)
+        {
+            dateTimePicker_Purchase_Dt.Enabled = enable;
+            txt_PurchaseVoucherNo.Enabled = enable;
+            txt_VendorName.Enabled = enable;
+            combo_payMode.Enabled = enable;
+            if (enable)
+            {
+                txt_PurchaseVoucherNo.Clear();
+                txt_VendorName.Clear();
+                dateTimePicker_Purchase_Dt.Focus();
+            }
+        }
 
+        private void txt_Discount_Percent_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_Discount_Percent.Text))
+            {
+                txt_discount_Amt.Clear();
+                return;
+            }
 
+            var gross = Convert.ToDecimal(txt_Price_bf_tax.Text);
+            var discountPercent = Convert.ToDecimal(txt_Discount_Percent.Text);
+
+            txt_discount_Amt.Text = (gross * discountPercent / 100).ToString("0.##");
+        }
+
+        private void txt_Quantity_StockEntry_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_Quantity_StockEntry.Text))
+                return;
+
+            var MRP = Convert.ToDecimal(txt_MRP_StockEntry.Text);
+            var discountAmt = string.IsNullOrEmpty(txt_discount_Amt.Text) ? 0 : Convert.ToDecimal(txt_discount_Amt.Text);
+            var quantity = Convert.ToInt32(txt_Quantity_StockEntry.Text);
+
+            txt_NetTotal_StockEntry.Text = (quantity * (MRP - discountAmt)).ToString("0.##");            
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            EnableDisableMaster(true);
+            pnlMain.Enabled = false;
+        }
+
+       
+        
         /*
         /////////////////////////////////////////////////////
         private bool _canUpdate = true; 

@@ -98,5 +98,15 @@ namespace MedEasy.DAC {
                 return ResourceManager.GetString("GetItem", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to select I.ITEM_UID, I.ITEM_BRAND_NAME,SD.BATCH_NO,SD.EXP_DT, SD.PURCHASE_QTY,SD.MRP from ME_OWN.TRN_STOCK_DTL SD
+        ///inner join ME_OWN.MST_ITEM I on SD.ITEM_UID = I.ITEM_UID.
+        /// </summary>
+        internal static string GetStockDtl {
+            get {
+                return ResourceManager.GetString("GetStockDtl", resourceCulture);
+            }
+        }
     }
 }

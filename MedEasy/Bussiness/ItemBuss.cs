@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace MedEasy.Bussiness
 {
-    public sealed class ItemBuss
+    internal sealed class ItemBuss
     {
-        ItemDac _dac = new ItemDac();
+        ItemDac _itemDac = new ItemDac();
         List<Item> _items = null;
 
         public List<Item> Items
         {
             get{
                 if (null == _items)
-                    _items = _dac.GetItems();
+                    _items = _itemDac.GetItems();
                 return _items;
             }            
         }
@@ -25,6 +25,16 @@ namespace MedEasy.Bussiness
         public List<SearchItem> GetSearchItem()
         {
             return Items.Select(itm => new SearchItem { ItemUid = itm.ItemUid, ItemBrandName = itm.ItemBrandName }).ToList();
+        }
+
+        public void SaveStock(SaveStock saveStock)
+        {
+            new StockDac().SaveStock(saveStock);
+        }
+
+        public List<StockDisplay> GetStocks()
+        {
+            return new StockDac().GetStockDtl();
         }
     }
 }

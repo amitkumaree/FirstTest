@@ -52,6 +52,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MedEasySQLCommands.resx</DependentUpon>
     </Compile>
+    <Compile Include="DAC\StockDac.cs" />
     <Compile Include="Forms\item\ItemEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +78,7 @@
       <DependentUpon>MedEasy-Start.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\SaveStock.cs" />
     <Compile Include="Model\SearchItem.cs" />
     <Compile Include="Model\Stock.cs" />
     <Compile Include="Model\StockDisplay.cs" />
@@ -123,6 +125,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\images\edit1600.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
