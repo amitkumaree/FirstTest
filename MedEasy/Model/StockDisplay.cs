@@ -12,16 +12,16 @@ namespace MedEasy.Model
         [System.ComponentModel.Browsable(false)]
         public int ItemUid { get; set; }
 
-        [System.ComponentModel.DisplayName("Item Name")]
+        [System.ComponentModel.DisplayName("ITEM NAME")]
         public string ItemBrandName { get; set; }
 
-        [System.ComponentModel.DisplayName("Batch")]
+        [System.ComponentModel.DisplayName("BATCH")]
         public string Batch { get; set; }
 
-        [System.ComponentModel.DisplayName("Expiry Date")]
+        [System.ComponentModel.DisplayName("EXPIRY DATE")]
         public DateTime ExpiryDt { get; set; }
 
-        [System.ComponentModel.DisplayName("Quantity")]
+        [System.ComponentModel.DisplayName("QUANTITY")]
         public int Quantity { get; set; }
 
         //[System.ComponentModel.DisplayName("Unit")]

@@ -162,7 +162,8 @@ namespace MedEasy.Forms.stock
         #region Events for place holder in the search box
         public void RemoveText(object sender, EventArgs e)
         {
-            txt_search_Item.Text = "";
+            if (txt_search_Item.Text.Equals("Search Medicine...."))
+                txt_search_Item.Text = "";
         }
         public void AddText(object sender, EventArgs e)
         {
@@ -185,6 +186,8 @@ namespace MedEasy.Forms.stock
                     combo_searchResult.DataSource = null;
                     combo_searchResult.Visible = false;
                 }
+                else
+                    txt_search_Item.Focus();
                 return;
             }
 
@@ -258,7 +261,7 @@ namespace MedEasy.Forms.stock
                 txt_IGST.Text = item.Igst.ToString();
                 txt_CSGT.Text = item.Cgst.ToString();
                 txt_Unit_StockEntry.Text = "1";
-                txt_No_of_Unit_in_Item.Text = item.PackSize;
+                txt_No_of_Unit_in_Item.Text = item.NoOfUnit.Value.ToString();
                 txt_Tax_StockEntry.Text = (item.Igst + item.Cgst).ToString();
                 txt_MRP_StockEntry.Text = GetMRP(item);
 
@@ -342,7 +345,7 @@ namespace MedEasy.Forms.stock
                         DiscountAmt = string.IsNullOrEmpty(txt_discount_Amt.Text) ? 0 : Convert.ToDecimal(txt_discount_Amt.Text),
                         NetPrice = string.IsNullOrEmpty(txt_NetTotal_StockEntry.Text) ? 0 : Convert.ToDecimal(txt_NetTotal_StockEntry.Text),
                         PurchaseQty = string.IsNullOrEmpty(txt_Quantity_StockEntry.Text) ? 0 : Convert.ToInt32(txt_Quantity_StockEntry.Text),
-                        PurchaseUnit = _currentChoosenITem.PackSize //! known issue
+                        PurchaseUnit = _currentChoosenITem.NoOfUnit.Value.ToString() //! known issue
                     };
 
                 new ItemBuss().SaveStock(saveStock);
