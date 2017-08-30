@@ -19,36 +19,42 @@ namespace MedEasy.Forms.stock
 
         public StockEntry()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            //pnl_stockOpeningStock.Location = new Point(50, this.ClientSize.Height / 2 - 
-            //pnl_stockOpeningStock.Size.Height / 2);
-            //pnl_stockOpeningStock.Anchor = AnchorStyles.Left;
-            //pnl_stockOpeningStock.Visible = true;
+                //pnl_stockOpeningStock.Location = new Point(50, this.ClientSize.Height / 2 - 
+                //pnl_stockOpeningStock.Size.Height / 2);
+                //pnl_stockOpeningStock.Anchor = AnchorStyles.Left;
+                //pnl_stockOpeningStock.Visible = true;
 
-            //pnl_viewItemGrid.Location = new Point(this.ClientSize.Width - pnl_viewItemGrid.Size.Width - 5, 25);
-            //pnl_viewItemGrid.Size = new Size(pnl_viewItemGrid.Size.Width, this.ClientSize.Height);
-            //pnl_viewItemGrid.Anchor = AnchorStyles.Right;
-            //pnl_viewItemGrid.Visible = true;
+                //pnl_viewItemGrid.Location = new Point(this.ClientSize.Width - pnl_viewItemGrid.Size.Width - 5, 25);
+                //pnl_viewItemGrid.Size = new Size(pnl_viewItemGrid.Size.Width, this.ClientSize.Height);
+                //pnl_viewItemGrid.Anchor = AnchorStyles.Right;
+                //pnl_viewItemGrid.Visible = true;
 
-            //var itemSearcLst = new ItemBuss().GetSearchItem();
-            //dataGrid_Item.DataSource = itemSearcLst;
-            _items = new ItemBuss().Items;
-            dataGridView_ShowStock.DataSource = new ItemBuss().GetStocks();
-            dataGridView_ShowStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
-            //AutoCompleteStringCollection MyCollection = new AutoCompleteStringCollection();
-            //foreach (var item in _items)
-            //    //MyCollection.Add(item.ItemBrandName);
-            //    MyCollection.Add(item.ItemUid.ToString() + " " + item.ItemBrandName + " " + item.MedType);
+                //var itemSearcLst = new ItemBuss().GetSearchItem();
+                //dataGrid_Item.DataSource = itemSearcLst;
+                _items = new ItemBuss().Items;
+                dataGridView_ShowStock.DataSource = new ItemBuss().GetStocks();
+                dataGridView_ShowStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            //txt_Name_StockEntry.AutoCompleteCustomSource = MyCollection;
+                //AutoCompleteStringCollection MyCollection = new AutoCompleteStringCollection();
+                //foreach (var item in _items)
+                //    //MyCollection.Add(item.ItemBrandName);
+                //    MyCollection.Add(item.ItemUid.ToString() + " " + item.ItemBrandName + " " + item.MedType);
+
+                //txt_Name_StockEntry.AutoCompleteCustomSource = MyCollection;
 
 
-            txt_search_Item.Text = "Search Medicine....";
+                txt_search_Item.Text = "Search Medicine....";
 
-            txt_search_Item.GotFocus += RemoveText;
-            txt_search_Item.LostFocus += AddText;
+                txt_search_Item.GotFocus += RemoveText;
+                txt_search_Item.LostFocus += AddText;
+                dateTimePicker_Purchase_Dt.Focus();
+            }
+            catch (Exception ex)
+            { }
         }
 
         //private void dataGrid_Item_SelectionChanged(object sender, EventArgs e)
@@ -182,6 +188,7 @@ namespace MedEasy.Forms.stock
             {
                 if (combo_searchResult.Visible)
                 {
+                    ClearItem();
                     combo_searchResult.DroppedDown = false;
                     combo_searchResult.DataSource = null;
                     combo_searchResult.Visible = false;
@@ -233,6 +240,8 @@ namespace MedEasy.Forms.stock
 
         private void combo_searchResult_DropDownClosed(object sender, EventArgs e)
         {
+            if (txt_search_Item.Text.Length < 3)
+                return;
             // Close search Drop Down list
             combo_searchResult.DroppedDown = false;
 
@@ -265,8 +274,22 @@ namespace MedEasy.Forms.stock
                 txt_Tax_StockEntry.Text = (item.Igst + item.Cgst).ToString();
                 txt_MRP_StockEntry.Text = GetMRP(item);
 
-                txt_Remarks_StockEntry.Focus();
+                txt_Quantity_StockEntry.Focus();
             }
+        }
+
+        private void ClearItem()
+        {
+            txt_Name_StockEntry.Clear();
+            txt_Price_bf_tax.Clear();
+            txt_Tax_StockEntry.Clear();
+            txt_Rate_StockEntry.Clear();
+            txt_IGST.Clear();
+            txt_CSGT.Clear();
+            txt_Unit_StockEntry.Clear();
+            txt_No_of_Unit_in_Item.Clear();
+            txt_Tax_StockEntry.Clear();
+            txt_MRP_StockEntry.Clear();
         }
 
         private string GetMRP(Item item)
