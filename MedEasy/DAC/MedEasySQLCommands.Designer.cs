@@ -68,16 +68,14 @@ namespace MedEasy.DAC {
         ///,ITEM_POWER
         ///,FORM_TYP_UID
         ///,MANUFACTURERS_UID
-        ///,PACK_SIZE
-        ///,PURCHASE_UNIT
-        ///,SALE_UNIT
+        ///,UNIT_MESURE
+        ///,UNIT
         ///,NO_OF_UNIT
         ///,PER_UNIT_RATE
         ///,MRP
         ///,MED_TYPE
         ///,SCHEDULE
         ///,RECORDED_QTY
-        ///,PROFIT_MERGINE
         ///,CGST
         ///,IGST
         ///,TAX
