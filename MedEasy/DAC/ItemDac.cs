@@ -44,7 +44,11 @@ namespace MedEasy.DAC
                                     item.MedType = CheckNull<string>(reader[itemConst.MedType]);
                                     item.Schedule = CheckNull<string>(reader[itemConst.Schedule]);
                                     item.RecordedQty = CheckNull<int?>(reader[itemConst.RecordedQty]);
+<<<<<<< HEAD
                                     //item.ProfitMergine = CheckNull<decimal?>(reader[itemConst.ProfitMergine]);
+=======
+                                    item.ProfitMargin = CheckNull<decimal?>(reader[itemConst.ProfitMergine]);
+>>>>>>> 6e71939051a046342bd2ba54e8df0aa757bce6b2
                                     item.Cgst = CheckNull<decimal?>(reader[itemConst.Cgst]);
                                     item.Igst = CheckNull<decimal?>(reader[itemConst.Igst]);
                                     item.Tax = CheckNull<decimal?>(reader[itemConst.Tax]);
@@ -93,7 +97,7 @@ namespace MedEasy.DAC
         internal const string MedType = "MED_TYPE";
         internal const string Schedule = "SCHEDULE";
         internal const string RecordedQty = "RECORDED_QTY";
-        internal const string ProfitMergine = "PROFIT_MERGINE";
+        internal const string ProfitMergine = "PROFIT_MARGIN";
         internal const string Cgst = "CGST";
         internal const string Igst = "IGST";
         internal const string Tax = "TAX";

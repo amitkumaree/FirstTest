@@ -16,19 +16,20 @@ namespace MedEasy.Model
 
         public string ItemId { get; set; }
 
-        
 
         public string ItemPower { get; set; }
+
+        public string DelFlg { get; set; }
 
         public int? FormTypUid { get; set; }
 
         public int? ManufacturersUid { get; set; }
 
-        public string PackSize { get; set; }
+        public int? CategoryUid { get; set; }
 
-        public string PurchaseUnit { get; set; }
+        public string UnitMesure { get; set; }
 
-        public string SaleUnit { get; set; }
+        public int? Unit { get; set; }
 
         public int? NoOfUnit { get; set; }
 
@@ -40,9 +41,13 @@ namespace MedEasy.Model
 
         public string Schedule { get; set; }
 
+        public string HsnNo { get; set; }
+
         public int? RecordedQty { get; set; }
 
-        public decimal? ProfitMergine { get; set; }
+        public int? BookedQty { get; set; }
+
+        public decimal? ProfitMargin { get; set; }
 
         public decimal? Cgst { get; set; }
 
@@ -71,5 +76,6 @@ namespace MedEasy.Model
         public DateTime? UpdtStamp { get; set; }
 
     }
+    
 
 }
