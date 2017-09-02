@@ -11,21 +11,6 @@ D:\POC\MedEasy\obj\Debug\MedEasy.csproj.GenerateResource.Cache
 D:\POC\MedEasy\obj\Debug\MedEasy.exe
 D:\POC\MedEasy\obj\Debug\MedEasy.pdb
 D:\POC\MedEasy\obj\Debug\MedEasy.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
-D:\GitHub\FirstTest\MedEasy\bin\Debug\MedEasy.exe.config
-D:\GitHub\FirstTest\MedEasy\bin\Debug\MedEasy.exe
-D:\GitHub\FirstTest\MedEasy\bin\Debug\MedEasy.pdb
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.csprojResolveAssemblyReference.cache
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.DAC.MedEasySQLCommands.resources
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.Forms.item.ItemEntry.resources
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.Forms.MedEasyMaster.resources
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.Forms.stock.StockEntry.resources
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.Main.resources
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.Properties.Resources.resources
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.csproj.GenerateResource.Cache
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.exe
-D:\GitHub\FirstTest\MedEasy\obj\Debug\MedEasy.pdb
-=======
 D:\POC\Github\FirstTest\MedEasy\bin\Debug\MedEasy.exe.config
 D:\POC\Github\FirstTest\MedEasy\bin\Debug\MedEasy.exe
 D:\POC\Github\FirstTest\MedEasy\bin\Debug\MedEasy.pdb
@@ -38,4 +23,3 @@ D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.Properties.Resources.resources
 D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.csproj.GenerateResource.Cache
 D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.exe
 D:\POC\Github\FirstTest\MedEasy\obj\Debug\MedEasy.pdb
->>>>>>> 6e71939051a046342bd2ba54e8df0aa757bce6b2

@@ -44,11 +44,7 @@ namespace MedEasy.DAC
                                     item.MedType = CheckNull<string>(reader[itemConst.MedType]);
                                     item.Schedule = CheckNull<string>(reader[itemConst.Schedule]);
                                     item.RecordedQty = CheckNull<int?>(reader[itemConst.RecordedQty]);
-<<<<<<< HEAD
-                                    //item.ProfitMergine = CheckNull<decimal?>(reader[itemConst.ProfitMergine]);
-=======
                                     item.ProfitMargin = CheckNull<decimal?>(reader[itemConst.ProfitMergine]);
->>>>>>> 6e71939051a046342bd2ba54e8df0aa757bce6b2
                                     item.Cgst = CheckNull<decimal?>(reader[itemConst.Cgst]);
                                     item.Igst = CheckNull<decimal?>(reader[itemConst.Igst]);
                                     item.Tax = CheckNull<decimal?>(reader[itemConst.Tax]);
